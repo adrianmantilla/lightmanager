@@ -26,6 +26,12 @@ A_MUESTRAS = ("aiSamples", "samples")
 A_USA_KELVIN = ("aiUseColorTemperature", "useColorTemperature")
 A_KELVIN = ("aiColorTemperature", "colorTemperature")
 A_GRUPO = ("aiAov", "aov")
+# Arnold llama «default» al grupo de las luces sin grupo: para LightManager eso es «sin grupo».
+GRUPO_DE_FABRICA = "default"
+
+
+def _grupo_de(valor):
+    return "" if not valor or valor == GRUPO_DE_FABRICA else valor
 A_CAMARA = ("aiCamera", "camera")
 A_NORMALIZAR = ("aiNormalize", "normalize")
 A_RADIO = ("aiRadius", "radius")
@@ -221,7 +227,7 @@ class ServiciosMaya(Servicios):
             color=tuple(color) if isinstance(color, tuple) else (1.0, 1.0, 1.0),
             tamano=float(tamano),
             muestras=int(_leer(forma, A_MUESTRAS, 1) or 1),
-            grupo=_leer(forma, A_GRUPO, "") or "",
+            grupo=_grupo_de(_leer(forma, A_GRUPO, "")),
             papel=_leer_lm(t, "papel", ""),
             zona=_leer_lm(t, "zona", ""),
             gemela=_leer_lm(t, "gemela", ""),
@@ -277,7 +283,7 @@ class ServiciosMaya(Servicios):
             elif campo == "muestras":
                 _poner(forma, A_MUESTRAS, int(valor))
             elif campo == "grupo":
-                _poner(forma, A_GRUPO, valor or "", "string")
+                _poner(forma, A_GRUPO, valor or GRUPO_DE_FABRICA, "string")
             elif campo == "ies":
                 _poner(forma, A_IES, valor or "", "string")
             elif campo == "posicion":
