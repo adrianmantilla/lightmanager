@@ -1,0 +1,300 @@
+{
+ "familia": "estudio",
+ "esquemas": [
+  {
+   "id": "tres_puntos",
+   "nombre": "Tres puntos",
+   "descripcion": "Clave, relleno y contra. El punto de partida clásico.",
+   "luces": [
+    {
+     "nombre": "Clave",
+     "tipo": "area",
+     "papel": "Clave",
+     "grupo": "clave",
+     "pasos": 8,
+     "kelvin": 4800,
+     "tamano": 0.6,
+     "azimut": 45,
+     "altura": 35,
+     "distancia": 2.5
+    },
+    {
+     "nombre": "Relleno",
+     "tipo": "area",
+     "papel": "Relleno",
+     "grupo": "relleno",
+     "pasos": 6.5,
+     "kelvin": 6500,
+     "tamano": 1.2,
+     "azimut": -55,
+     "altura": 15,
+     "distancia": 2.5
+    },
+    {
+     "nombre": "Contra",
+     "tipo": "area",
+     "papel": "Contra",
+     "grupo": "contra",
+     "pasos": 7.5,
+     "kelvin": 5600,
+     "tamano": 0.4,
+     "azimut": 160,
+     "altura": 40,
+     "distancia": 2.5
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  },
+  {
+   "id": "producto",
+   "nombre": "Producto en estudio",
+   "descripcion": "Caja de luz cenital, dos laterales y un cielo de estudio.",
+   "hdri": "studio_small_09",
+   "luces": [
+    {
+     "nombre": "Cenital",
+     "tipo": "area",
+     "papel": "Clave",
+     "grupo": "clave",
+     "pasos": 7.75,
+     "kelvin": 5600,
+     "tamano": 1.6,
+     "azimut": 0,
+     "altura": 75,
+     "distancia": 2.2
+    },
+    {
+     "nombre": "Lateral izq",
+     "tipo": "area",
+     "papel": "Relleno",
+     "grupo": "relleno",
+     "pasos": 6.75,
+     "kelvin": 5600,
+     "tamano": 1.0,
+     "azimut": -85,
+     "altura": 20,
+     "distancia": 2.2
+    },
+    {
+     "nombre": "Lateral der",
+     "tipo": "area",
+     "papel": "Relleno",
+     "grupo": "relleno",
+     "pasos": 6.75,
+     "kelvin": 5600,
+     "tamano": 1.0,
+     "azimut": 85,
+     "altura": 20,
+     "distancia": 2.2
+    },
+    {
+     "nombre": "Cielo",
+     "tipo": "cielo",
+     "papel": "Ambiente",
+     "grupo": "ambiente",
+     "pasos": -1.5,
+     "kelvin": 6500,
+     "tamano": 1,
+     "azimut": 0,
+     "altura": 90,
+     "distancia": 0
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  },
+  {
+   "id": "rembrandt",
+   "nombre": "Retrato Rembrandt",
+   "descripcion": "Clave alta a un lado y un rebote suave. Mucho volumen.",
+   "luces": [
+    {
+     "nombre": "Clave",
+     "tipo": "area",
+     "papel": "Clave",
+     "grupo": "clave",
+     "pasos": 8.25,
+     "kelvin": 3800,
+     "tamano": 0.8,
+     "azimut": 50,
+     "altura": 45,
+     "distancia": 2.5
+    },
+    {
+     "nombre": "Rebote",
+     "tipo": "area",
+     "papel": "Relleno",
+     "grupo": "relleno",
+     "pasos": 5.25,
+     "kelvin": 4500,
+     "tamano": 1.6,
+     "azimut": -65,
+     "altura": 0,
+     "distancia": 2.5
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  },
+  {
+   "id": "contraluz",
+   "nombre": "Contraluz",
+   "descripcion": "Silueta con borde brillante y un relleno muy bajo.",
+   "luces": [
+    {
+     "nombre": "Contra izq",
+     "tipo": "area",
+     "papel": "Contra",
+     "grupo": "contra",
+     "pasos": 8.5,
+     "kelvin": 5600,
+     "tamano": 0.5,
+     "azimut": -150,
+     "altura": 25,
+     "distancia": 2.5
+    },
+    {
+     "nombre": "Contra der",
+     "tipo": "area",
+     "papel": "Contra",
+     "grupo": "contra",
+     "pasos": 8.5,
+     "kelvin": 5600,
+     "tamano": 0.5,
+     "azimut": 150,
+     "altura": 25,
+     "distancia": 2.5
+    },
+    {
+     "nombre": "Relleno",
+     "tipo": "area",
+     "papel": "Relleno",
+     "grupo": "relleno",
+     "pasos": 4.5,
+     "kelvin": 6500,
+     "tamano": 1.5,
+     "azimut": 0,
+     "altura": 10,
+     "distancia": 3
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  },
+  {
+   "id": "dia",
+   "nombre": "Exterior día",
+   "descripcion": "Sol nítido y cielo azul alrededor del objeto.",
+   "hdri": "kloofendal_48d_partly_cloudy_puresky",
+   "luces": [
+    {
+     "nombre": "Sol",
+     "tipo": "sol",
+     "papel": "Clave",
+     "grupo": "clave",
+     "pasos": 3,
+     "kelvin": 5600,
+     "tamano": 0.5,
+     "azimut": 130,
+     "altura": 58,
+     "distancia": 0
+    },
+    {
+     "nombre": "Cielo",
+     "tipo": "cielo",
+     "papel": "Ambiente",
+     "grupo": "ambiente",
+     "pasos": 0,
+     "kelvin": 9000,
+     "tamano": 1,
+     "azimut": 0,
+     "altura": 90,
+     "distancia": 0
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  },
+  {
+   "id": "atardecer",
+   "nombre": "Atardecer",
+   "descripcion": "Sol bajo y cálido, cielo frío. Sombras largas.",
+   "hdri": "venice_sunset",
+   "luces": [
+    {
+     "nombre": "Sol",
+     "tipo": "sol",
+     "papel": "Clave",
+     "grupo": "clave",
+     "pasos": 2.5,
+     "kelvin": 2600,
+     "tamano": 0.5,
+     "azimut": 200,
+     "altura": 8,
+     "distancia": 0
+    },
+    {
+     "nombre": "Cielo",
+     "tipo": "cielo",
+     "papel": "Ambiente",
+     "grupo": "ambiente",
+     "pasos": -0.5,
+     "kelvin": 7500,
+     "tamano": 1,
+     "azimut": 0,
+     "altura": 90,
+     "distancia": 0
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  },
+  {
+   "id": "noche",
+   "nombre": "Noche",
+   "descripcion": "Luna fría, farola cálida y un cielo muy tenue.",
+   "hdri": "dikhololo_night",
+   "luces": [
+    {
+     "nombre": "Luna",
+     "tipo": "sol",
+     "papel": "Clave",
+     "grupo": "clave",
+     "pasos": 0.5,
+     "kelvin": 9500,
+     "tamano": 0.5,
+     "azimut": 140,
+     "altura": 50,
+     "distancia": 0
+    },
+    {
+     "nombre": "Farola",
+     "tipo": "foco",
+     "papel": "Prácticas",
+     "grupo": "practicas",
+     "pasos": 9,
+     "kelvin": 2200,
+     "tamano": 0.15,
+     "azimut": -40,
+     "altura": 60,
+     "distancia": 2.5
+    },
+    {
+     "nombre": "Cielo",
+     "tipo": "cielo",
+     "papel": "Ambiente",
+     "grupo": "ambiente",
+     "pasos": -3,
+     "kelvin": 12000,
+     "tamano": 1,
+     "azimut": 0,
+     "altura": 90,
+     "distancia": 0
+    }
+   ],
+   "modo": "estudio",
+   "familia": "estudio"
+  }
+ ]
+}

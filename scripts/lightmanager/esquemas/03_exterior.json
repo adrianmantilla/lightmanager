@@ -1,0 +1,86 @@
+{
+ "familia": "exterior",
+ "esquemas": [
+  {
+   "id": "exterior_dia",
+   "nombre": "Exterior de día",
+   "descripcion": "Sol y cielo físico a mediodía en tu ciudad.",
+   "modo": "escena",
+   "sol": {
+    "hora": "mediodia",
+    "pasos": 3
+   },
+   "cielo": {
+    "tipo": "fisico",
+    "pasos": 0
+   },
+   "portales": false,
+   "practicas": false,
+   "familia": "exterior"
+  },
+  {
+   "id": "exterior_manana",
+   "nombre": "Primera hora",
+   "descripcion": "Sol bajo de mañana, sombras largas y frías.",
+   "modo": "escena",
+   "sol": {
+    "hora": "salida+1",
+    "pasos": 3
+   },
+   "cielo": {
+    "tipo": "fisico",
+    "pasos": 0
+   },
+   "portales": false,
+   "practicas": false,
+   "familia": "exterior"
+  },
+  {
+   "id": "exterior_atardecer",
+   "nombre": "Atardecer",
+   "descripcion": "Media hora antes de la puesta: sol naranja y rasante.",
+   "modo": "escena",
+   "sol": {
+    "hora": "puesta-0.5",
+    "pasos": 3
+   },
+   "cielo": {
+    "tipo": "fisico",
+    "pasos": 0
+   },
+   "portales": false,
+   "practicas": false,
+   "familia": "exterior"
+  },
+  {
+   "id": "exterior_nublado",
+   "nombre": "Nublado",
+   "descripcion": "Sin sol directo, solo cielo suave. Sombras de contacto.",
+   "modo": "escena",
+   "sol": null,
+   "cielo": {
+    "tipo": "hdri",
+    "hdri": "kloofendal_48d_partly_cloudy_puresky",
+    "pasos": 1
+   },
+   "portales": false,
+   "practicas": false,
+   "familia": "exterior"
+  },
+  {
+   "id": "exterior_noche",
+   "nombre": "Noche urbana",
+   "descripcion": "Cielo nocturno, farolas y ventanas encendidas.",
+   "modo": "escena",
+   "sol": null,
+   "cielo": {
+    "tipo": "hdri",
+    "hdri": "dikhololo_night",
+    "pasos": 0
+   },
+   "portales": false,
+   "practicas": true,
+   "familia": "exterior"
+  }
+ ]
+}
