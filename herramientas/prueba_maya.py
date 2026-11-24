@@ -124,7 +124,8 @@ def main():
         comprobar(cerca(direccion_mundo(cmds, clave), (-1.0, 0.0, 0.0), 0.02), "apuntar: la luz alumbra el punto de frente")
         g.apuntar(clave, "reflejo", (0.0, 1.0, 0.0), (0.0, 1.0, 0.0), (0, 1.5, 6))
         d = direccion_mundo(cmds, clave)
-        comprobar(d[1] < -0.1 and d[2] > 0.1, "apuntar reflejo: la luz viene de detrás y arriba")
+        # Brillo en lo alto del objeto visto desde la cámara: la luz está al otro lado, casi rasante, y alumbra hacia la cámara.
+        comprobar(d[1] < 0 and d[2] > 0.9, "apuntar reflejo: la luz viene del otro lado, hacia la cámara")
 
         # --- tipos de luz ---
         for tipo in ("foco", "punto", "fotometrica", "sol"):
@@ -184,7 +185,7 @@ def main():
         avisos = g.comprobar()
         comprobar(len(avisos) > 0, "comprobaciones ({} avisos)".format(len(avisos)))
         comprobar(len(api.listar()) == len(g.luces), "api.listar")
-        comprobar(api.resumen()["luces"] == len(g.luces), "api.resumen")
+        comprobar(api.resumen()["luces"] == len([x for x in g.luces if x.emite]), "api.resumen (sin contar portales)")
 
         ruta = os.path.join(temporal, "escena.ma")
         cmds.file(rename=ruta)

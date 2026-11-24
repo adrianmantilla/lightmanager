@@ -663,6 +663,10 @@ class ServiciosMaya(Servicios):
             return []
         try:
             import mtoa.aovs as aovs
+            if not cmds.objExists("defaultArnoldDriver"):
+                # En una escena nueva (o en mayapy) Arnold aún no ha creado sus nodos de render.
+                from mtoa.core import createOptions
+                createOptions()
             interfaz = aovs.AOVInterface()
             if not cmds.objExists("aiAOV_RGBA"):
                 interfaz.addAOV("RGBA")
