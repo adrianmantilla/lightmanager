@@ -22,6 +22,11 @@ import sys
 import tempfile
 import traceback
 
+try:  # que las líneas salgan aunque la salida vaya a un archivo (el script termina con os._exit)
+    sys.stdout.reconfigure(line_buffering=True)
+except AttributeError:
+    pass
+
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, "scripts"))
 
@@ -78,10 +83,10 @@ def main():
         cmds.polyPlane(name="suelo", width=10, height=10)
         taza = cmds.polyCube(name="taza", width=1, height=1, depth=1)[0]
         cmds.move(0, 0.5, 0, taza)
-        cam = cmds.camera(name="camRender")[0]
+        cam, cam_forma = cmds.camera(name="camRender")
         cmds.move(0, 1.5, 6, cam)
         cmds.setAttr("perspShape.renderable", False)
-        cmds.setAttr(cam + "Shape.renderable", True)
+        cmds.setAttr(cam_forma + ".renderable", True)
 
         s = ServiciosMaya()
         g = Gestor(s, Ajustes(os.path.join(temporal, "prefs")))
