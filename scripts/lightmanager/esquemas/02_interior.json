@@ -1,0 +1,53 @@
+{
+ "familia": "interior",
+ "esquemas": [
+  {
+   "id": "interior_dia",
+   "nombre": "Interior de día",
+   "descripcion": "Sol y cielo según la hora, con portales en las ventanas seleccionadas.",
+   "modo": "escena",
+   "sol": {
+    "hora": "mediodia",
+    "pasos": 3
+   },
+   "cielo": {
+    "tipo": "fisico",
+    "pasos": 0
+   },
+   "portales": true,
+   "practicas": false,
+   "familia": "interior"
+  },
+  {
+   "id": "interior_atardecer",
+   "nombre": "Interior al atardecer",
+   "descripcion": "Sol bajo por la ventana y las lámparas del salón encendidas.",
+   "modo": "escena",
+   "sol": {
+    "hora": "puesta-1",
+    "pasos": 3
+   },
+   "cielo": {
+    "tipo": "fisico",
+    "pasos": 0
+   },
+   "portales": true,
+   "practicas": true,
+   "familia": "interior"
+  },
+  {
+   "id": "interior_noche",
+   "nombre": "Interior de noche",
+   "descripcion": "Sin sol, cielo muy tenue y todas las prácticas encendidas.",
+   "modo": "escena",
+   "sol": null,
+   "cielo": {
+    "tipo": "fisico",
+    "pasos": -4
+   },
+   "portales": true,
+   "practicas": true,
+   "familia": "interior"
+  }
+ ]
+}
