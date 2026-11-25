@@ -925,7 +925,7 @@ class Gestor(object):
                     self.s.poner_enlace(nodo, malla, 1)
             elif a == "bajar_muestras":
                 for n in aviso.nodos:
-                    self.s.escribir(n, {"muestras": 3})
+                    self.s.escribir(n, {"muestras": 1})
             elif a == "renombrar":
                 self._renombrar_por_papel(aviso.nodos)
             elif a == "ocultar_camara":
