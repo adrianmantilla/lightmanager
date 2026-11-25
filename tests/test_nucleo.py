@@ -381,6 +381,16 @@ class GestorPruebas(unittest.TestCase):
         claves = {a.clave for a in comprobaciones.pendientes(self.g.comprobar())}
         self.assertFalse({"solo", "decay", "nombres"} & claves)
 
+    def test_arreglar_muestras_baja_a_1(self):
+        self.s.crear({"nombre": "LM_Lenta", "tipo": "punto", "decay": 2, "muestras": 8})
+        self.g.refrescar()
+        claves = {a.clave: a for a in comprobaciones.pendientes(self.g.comprobar())}
+        self.assertIn("muestras", claves)
+        self.g.arreglar(claves["muestras"])
+        self.assertEqual(self.g.luz("LM_Lenta").muestras, 1)
+        claves = {a.clave for a in comprobaciones.pendientes(self.g.comprobar())}
+        self.assertNotIn("muestras", claves)
+
     def test_guardar_esquema_propio(self):
         self.g.aplicar_esquema(self.esquema())
         ruta = self.g.guardar_como_esquema("Mi luz de taza")
